@@ -141,14 +141,26 @@ SO2: 1 ppb
 
   if (event.message.text === '*รายละเอียด') {
     step = null
-    return client.replyMessage(event.replyToken, [{
-      type: 'text',
-      text: `
+    return client.replyMessage(event.replyToken, [
+      {
+        type: 'text',
+        text: `
 📃รายละเอียดโครงการรถไฟฟ้าสายสีส้ม
 
-ดำเนินการเสร็จสิ้นภายในปลายปี 2561
+โครงสร้างรถไฟฟ้าแบบยกระดับระยะทาง 9 กม. สถานียกระดับ 7 สถานี และโครงสร้างรถไฟฟ้าแบบใต้ดินระยะทาง 30.6 กม. สถานีใต้ดิน 23 สถานี (รวม 39.6 กม. 30 สถานี)
 `.trim()
-    }])
+      },
+      {
+          "type": "image",
+          "originalContentUrl": "http://www.realist.co.th/blog/wp-content/uploads/2016/12/1040.jpg",
+          "previewImageUrl": "http://www.realist.co.th/blog/wp-content/uploads/2016/12/1040.jpg"
+      },
+      {
+          "type": "image",
+          "originalContentUrl": "http://www.most.go.th/main/images/stories/2_1-1.png",
+          "previewImageUrl": "http://www.most.go.th/main/images/stories/2_1-1.png"
+      }
+  ])
   }
 
   if (event.message.text === '*ความคืบหน้า') {
